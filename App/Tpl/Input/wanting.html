@@ -1,0 +1,144 @@
+<layout name="pub_input" />
+<script type="text/javascript">
+
+//x限制只能输入数字
+ function clearNoNum(obj)
+    {
+        //先把非数字的都替换掉，除了数字和.
+        obj.value = obj.value.replace(/[^\d.]/g,"");
+        //必须保证第一个为数字而不是.
+        obj.value = obj.value.replace(/^\./g,"");
+        //保证只有出现一个.而没有多个.
+        obj.value = obj.value.replace(/\.{2,}/g,".");
+        //保证.只出现一次，而不能出现两次以上
+        obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
+    }
+
+function InputCheck(InputForm)
+{
+//检查下拉框是否选择
+/*if(document.getElementById("parameter").value == "null"){
+  alert("请选择评价参数！");
+  return false;
+}*/
+//检查输入框是否全部输入
+  if (InputForm.in_sum.value == "")
+  {
+    alert("请输入绿色物流培训投入费用额!");
+    InputForm.in_sum.focus();
+    return (false);
+  }
+  if (InputForm.sum.value == "")
+  {
+    alert("请输入当期物流费用总额!");
+    InputForm.sum.focus();
+    return (false);
+  }
+    if (InputForm.out.value == "")
+  {
+    alert("请输入绿色物流产出!");
+    InputForm.out.focus();
+    return (false);
+  }
+   if (InputForm.in.value == "")
+  {
+    alert("请输入实施绿色物流直接投入!");
+    InputForm.in.focus();
+    return (false);
+  }
+   if (InputForm.support_num.value == "")
+  {
+    alert("请输入支持公司绿色物流的零售商数量!");
+    InputForm.support_num.focus();
+    return (false);
+  }
+    if (InputForm.agent_num.value == "")
+  {
+    alert("请输入公司零售商总数!");
+    InputForm.agent_num.focus();
+    return (false);
+  }
+ 
+}
+
+</script>
+
+
+
+<style type="text/css">
+td {padding-top: 0.3cm;padding-bottom:0.3cm;}
+th {padding-top: 0.3cm;padding-bottom:0.3cm;}
+</style>
+<div class="content">
+        <div class="header">
+            <div class="stats">
+  <!--   <p class="stat"><span class="label label-info">5</span> Tickets</p>
+    <p class="stat"><span class="label label-success">27</span> Tasks</p>
+    <p class="stat"><span class="label label-danger">15</span> Overdue</p> -->
+</div>
+
+            <h1 class="page-title">烟草公司与零售商绿色物流意愿水平</h1>
+        <ul class="breadcrumb">
+            <li><a href="__URL__/">数据录入与管理</a> </li>
+            <li class="active"><a href="#">烟草公司与零售商绿色物流意愿水平</a></li>
+		<!-- 	<li class="active">仓储利用率</li> -->
+        </ul>
+
+        </div>
+        <div class="main-content"><form id="InputForm"  onSubmit="return InputCheck(this)" name="InputForm" action="wanting_add" method="post" class= "shadow">  
+<font size="1" color="red">&nbsp;&nbsp;（以下各项只能填数字）</font>
+<fieldset><center>	
+<table border="0"  >
+  <tr>
+	   <th align="left">时间:</th>
+	   <th>
+		<select name="time" id="time"  class="choice" >
+		<option value="2010">2010</option>
+		<option value="2011">2011</option>
+		<option value="2012">2012</option>
+		<option value="2013">2013</option>
+		<option value="2014">2014</option>
+		<option value="2015">2015</option>
+		</select>
+		</th>
+		<th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地点:</th>
+		<th>
+		<select name="place" id ="place"  class="choice" >
+		<!-- <option  value="null">请选择</opton> -->
+		<option value="长沙">长沙</option>
+		<option value="武汉">武汉</option>
+		<option value="成都">成都</option>
+		</select>
+		</th>
+		
+  </tr>
+ 
+  
+  <tr>
+    <td align="left">绿色物流培训投入费用额:</td><td><input id="in_sum" name="in_sum" type="text"  onkeyup="clearNoNum(this)"/></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当期物流费用总额:</td><td align="right"><input type="text" name="sum" id ="sum" onkeyup="clearNoNum(this)"/></td>
+  </tr>  <tr>&nbsp;&nbsp;&nbsp;&nbsp; </tr> 
+  
+   <tr>
+    <td align="left">绿色物流产出: </td><td><input type="text" name="out"  id ="out" onkeyup="clearNoNum(this)"/></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实施绿色物流直接投入:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td><td align="right"><input type="text" name="in" id="in" onkeyup="clearNoNum(this)"/></td>
+  </tr>
+  
+   <tr>
+    <td align="left">支持公司绿色物流的零售商数量: </td><td><input type="text" name="support_num" id = "support_num" onkeyup="clearNoNum(this)"/></td>
+   <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司零售商总数:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td><td align="right"><input type="text" name="agent_num" id="agent_num" onkeyup="clearNoNum(this)"/></td>
+   </tr>
+   
+</table> </center>
+</fieldset> <br/>
+<input type="reset" value="重   置"  class="btn btn-primary btn-me-reset"/>
+ <input type="submit" value="确   定" class="btn btn-primary btn-me-ok "/>
+
+
+<br/><br/>
+ </form>
+
+<div id="output"></div> 
+	</div>
+		</div>
+            

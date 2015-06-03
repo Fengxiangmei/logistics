@@ -1,0 +1,296 @@
+<layout name="pub_comment2" /> 
+
+<div class="content">
+   <div class="header">
+            <div class="stats">
+  <!--   <p class="stat"><span class="label label-info">5</span> Tickets</p>
+    <p class="stat"><span class="label label-success">27</span> Tasks</p>
+    <p class="stat"><span class="label label-danger">15</span> Overdue</p> -->
+</div>
+
+            <h1 class="page-title">具体指标分析</h1>
+     <!--    <ul class="breadcrumb">
+            <li><a href="index.html">卷烟绿色物流评价</a> </li>
+            <li class="active"><a href="index.html">卷烟绿色仓储</a></li>
+			<li class="active">仓储利用率</li>
+        </ul> -->
+
+        </div>
+  <div class="main-content">
+<center>  
+ <table border="1" width="800px" height="1000px">
+ <caption><b><h3>具体指标在各评语下的隶属度</h3></b></caption>
+         <tr width="40px">
+            <th>分析角度</th>
+			<th>具体指标</th>
+            <th>v1</th>
+            <th>v2</th>
+			<th>v3</th>
+            <th>v4</th>
+			<th>v5</th>
+			<th>总分</th>
+         </tr>
+		 <tr width="40px">
+            <th>分值</th>
+			<td></td>
+            <td align="center">100</td>
+            <td align="center">80</td>
+			<td align="center">60</td>
+            <td align="center">40</td>
+			<td align="center">20</td>
+			<td align="center"></td>
+         </tr>
+		  <tr>
+		  <th rowspan="3">卷烟绿色仓储</th><td align="center">仓储环节卷烟破损率</td><td align="center"><{$v1.1|substr=0,5}></td><td align="center"><{$v1.2|substr=0,5}></td><td align="center"><{$v1.3|substr=0,5}></td><td align="center"><{$v1.4|substr=0,5}></td><td align="center"><{$v1.5|substr=0,5}></td><td align="center"><{$ju1.1|substr=0,5}></td></tr>
+		  <tr><td align="center">仓库利用率</td><td align="center"><{$v2.1|substr=0,5}></td><td align="center"><{$v2.2|substr=0,5}></td><td align="center"><{$v2.3|substr=0,5}></td><td align="center"><{$v2.4|substr=0,5}></td><td align="center"><{$v2.5|substr=0,5}></td><td align="center"><{$ju1.2|substr=0,5}></td></tr>
+		  <tr><td align="center">仓储环节单位电能消耗</td><td align="center"><{$v3.1|substr=0,5}></td><td align="center"><{$v3.2|substr=0,5}></td><td align="center"><{$v3.3|substr=0,5}></td><td align="center"><{$v3.4|substr=0,5}></td><td align="center"><{$v3.5|substr=0,5}></td><td align="center"><{$ju1.3|substr=0,5}></td></tr>
+			
+			<th rowspan="10">卷烟绿色分拣</th><td align="center">分拣环节卷烟破损率</td><td align="center"><{$b1.1|substr=0,5}></td><td align="center"><{$b1.2|substr=0,5}></td><td align="center"><{$b1.3|substr=0,5}></td><td align="center"><{$b1.4|substr=0,5}></td><td align="center"><{$b1.5|substr=0,5}></td><td align="center"><{$ju2.1|substr=0,5}></td></tr>
+			<tr><td align="center">分拣环节单位电能消耗</td><td align="center"><{$b2.1|substr=0,5}></td><td align="center"><{$b2.2|substr=0,5}></td><td align="center"><{$b2.3|substr=0,5}></td><td align="center"><{$b2.4|substr=0,5}></td><td align="center"><{$b2.5|substr=0,5}></td><td align="center"><{$ju2.2|substr=0,5}></td></tr> 
+			<tr><td align="center">分拣差错率</td><td align="center"><{$b3.1|substr=0,5}></td><td align="center"><{$b3.2|substr=0,5}></td><td align="center"><{$b3.3|substr=0,5}></td><td align="center"><{$b3.4|substr=0,5}></td><td align="center"><{$b3.5|substr=0,5}></td><td align="center"><{$ju2.3|substr=0,5}></td></tr> 
+			<tr><td align="center">平均作业效率</td><td align="center"><{$b4.1|substr=0,5}></td><td align="center"><{$b4.2|substr=0,5}></td><td align="center"><{$b4.3|substr=0,5}></td><td align="center"><{$b4.4|substr=0,5}></td><td align="center"><{$b4.5|substr=0,5}></td><td align="center"><{$ju2.4|substr=0,5}></td></tr> 		
+			<tr><td align="center">人均分拣效率</td><td align="center"><{$b5.1|substr=0,5}></td><td align="center"><{$b5.2|substr=0,5}></td><td align="center"><{$b5.3|substr=0,5}></td><td align="center"><{$b5.4|substr=0,5}></td><td align="center"><{$b5.5|substr=0,5}></td><td align="center"><{$ju2.5|substr=0,5}></td></tr> 
+			<tr><td align="center">分拣设备有效作业率</td><td align="center"><{$b6.1|substr=0,5}></td><td align="center"><{$b6.2|substr=0,5}></td><td align="center"><{$b6.3|substr=0,5}></td><td align="center"><{$b6.4|substr=0,5}></td><td align="center"><{$b6.5|substr=0,5}></td><td align="center"><{$ju2.6|substr=0,5}></td></tr> 
+			<tr><td align="center">纸箱合格率</td><td align="center"><{$b7.1|substr=0,5}></td><td align="center"><{$b7.2|substr=0,5}></td><td align="center"><{$b7.3|substr=0,5}></td><td align="center"><{$b7.4|substr=0,5}></td><td align="center"><{$b7.5|substr=0,5}></td><td align="center"><{$ju2.7|substr=0,5}></td></tr>
+			<tr><td align="center">分拣车间噪声水平</td><td align="center"><{$b8.1|substr=0,5}></td><td align="center"><{$b8.2|substr=0,5}></td><td align="center"><{$b8.3|substr=0,5}></td><td align="center"><{$b8.4|substr=0,5}></td><td align="center"><{$b8.5|substr=0,5}></td><td align="center"><{$ju2.8|substr=0,5}></td></tr> 
+			<tr><td align="center">PE膜回收率</td><td align="center"><{$b9.1|substr=0,5}></td><td align="center"><{$b9.2|substr=0,5}></td><td align="center"><{$b9.3|substr=0,5}></td><td align="center"><{$b9.4|substr=0,5}></td><td align="center"><{$b9.5|substr=0,5}></td><td align="center"><{$ju2.9|substr=0,5}></td></tr> 
+			<tr><td align="center">纸箱回收率</td><td align="center"><{$b10.1|substr=0,5}></td><td align="center"><{$b10.2|substr=0,5}></td><td align="center"><{$b10.3|substr=0,5}></td><td align="center"><{$b10.4|substr=0,5}></td><td align="center"><{$b10.5|substr=0,5}></td><td align="center"><{$ju2.10|substr=0,5}></td></tr> 
+
+			<th rowspan="6">卷烟绿色配送运输</th><td align="center">单箱油耗量</td><td align="center"><{$m1.1|substr=0,5}></td><td align="center"><{$m1.2|substr=0,5}></td><td align="center"><{$m1.3|substr=0,5}></td><td align="center"><{$m1.4|substr=0,5}></td><td align="center"><{$m1.5|substr=0,5}></td><td align="center"><{$ju3.1|substr=0,5}></td></tr>
+			<tr><td align="center">配送环节卷烟破损率</td><td align="center"><{$m2.1|substr=0,5}></td><td align="center"><{$m2.2|substr=0,5}></td><td align="center"><{$m2.3|substr=0,5}></td><td align="center"><{$m2.4|substr=0,5}></td><td align="center"><{$m2.5|substr=0,5}></td><td align="center"><{$ju3.2|substr=0,5}></td></tr> 
+			<tr><td align="center">送货准确率</td><td align="center"><{$m3.1|substr=0,5}></td><td align="center"><{$m3.2|substr=0,5}></td><td align="center"><{$m3.3|substr=0,5}></td><td align="center"><{$m3.4|substr=0,5}></td><td align="center"><{$m3.5|substr=0,5}></td><td align="center"><{$ju3.3|substr=0,5}></td></tr> 
+			<tr><td align="center">车辆装载率</td><td align="center"><{$m4.1|substr=0,5}></td><td align="center"><{$m4.2|substr=0,5}></td><td align="center"><{$m4.3|substr=0,5}></td><td align="center"><{$m4.4|substr=0,5}></td><td align="center"><{$m4.5|substr=0,5}></td><td align="center"><{$ju3.4|substr=0,5}></td></tr> 		
+			<tr><td align="center">配送车辆GPS使用率</td><td align="center"><{$m5.1|substr=0,5}></td><td align="center"><{$m5.2|substr=0,5}></td><td align="center"><{$m5.3|substr=0,5}></td><td align="center"><{$m5.4|substr=0,5}></td><td align="center"><{$m5.5|substr=0,5}></td><td align="center"><{$ju3.5|substr=0,5}></td></tr> 
+			<tr><td align="center">运输车辆百公里油耗</td><td align="center"><{$m6.1|substr=0,5}></td><td align="center"><{$m6.2|substr=0,5}></td><td align="center"><{$m6.3|substr=0,5}></td><td align="center"><{$m6.4|substr=0,5}></td><td align="center"><{$m6.5|substr=0,5}></td><td align="center"><{$ju3.6|substr=0,5}></td></tr> 
+			
+			<th rowspan="4">综合指标</th><td align="center">环境管理体系认证情况</td><td align="center"><{$n1.1|substr=0,5}></td><td align="center"><{$n1.2|substr=0,5}></td><td align="center"><{$n1.3|substr=0,5}></td><td align="center"><{$n1.4|substr=0,5}></td><td align="center"><{$n1.5|substr=0,5}></td><td align="center"><{$ju4.1|substr=0,5}></td></tr>
+			<tr><td align="center">物流费用率</td><td align="center"><{$n2.1|substr=0,5}></td><td align="center"><{$n2.2|substr=0,5}></td><td align="center"><{$n2.3|substr=0,5}></td><td align="center"><{$n2.4|substr=0,5}></td><td align="center"><{$n2.5|substr=0,5}></td><td align="center"><{$ju4.2|substr=0,5}></td></tr> 
+			<tr><td align="center">人才保障</td><td align="center"><{$n3.1|substr=0,5}></td><td align="center"><{$n3.2|substr=0,5}></td><td align="center"><{$n3.3|substr=0,5}></td><td align="center"><{$n3.4|substr=0,5}></td><td align="center"><{$n3.5|substr=0,5}></td><td align="center"><{$ju4.3|substr=0,5}></td></tr> 
+			<tr><td align="center">客户绿色物流认同率</td><td align="center"><{$n4.1|substr=0,5}></td><td align="center"><{$n4.2|substr=0,5}></td><td align="center"><{$n4.3|substr=0,5}></td><td align="center"><{$n4.4|substr=0,5}></td><td align="center"><{$n4.5|substr=0,5}></td><td align="center"><{$ju4.4|substr=0,5}></td></tr> 		
+			
+			</table>
+<br/>
+</center>
+<br/>
+  <font size ="5">本系统将v1，v2，v3，v4，v5 分别表示“优秀”，“良好”，“中等”，“一般”，“差”五个等级，它们的分值分别为100，80，60，40，20。 根据上表可以得出:<br/>在卷烟绿色仓储下：<br/>
+  仓储环节卷烟破损率:   <b>S11= 100*<{$v1.1|substr=0,5}>+80*<{$v1.2|substr=0,5}>+60*<{$v1.3|substr=0,5}>+40*<{$v1.4|substr=0,5}>+20*<{$v1.5|substr=0,5}>= <{$ju1.1|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju1.1 gt 40) and  ($ju1.1 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju1.1 gt 60) and  ($ju1.1 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju1.1 gt 80) and  ($ju1.1 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju1.1 gt 20) and  ($ju1.1 lt 40) "/><b>一般水平</b>  ，计算期仓储破损量，计算期总作业量等是改进的具体方向。
+  <elseif condition="($ju1.1 elt 20) "/><b>差水平</b> ，计算期仓储破损量，计算期总作业量等是改进的具体方向
+ </if>。<br/>
+ 
+   仓库利用率:   <b>S12= 100*<{$v2.1|substr=0,5}>+80*<{$v2.2|substr=0,5}>+60*<{$v2.3|substr=0,5}>+40*<{$v2.4|substr=0,5}>+20*<{$v2.5|substr=0,5}>= <{$ju1.2|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju1.2 gt 40) and  ($ju1.2 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju1.2 gt 60) and  ($ju1.2 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju1.2 gt 80) and  ($ju1.2 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju1.2 gt 20) and  ($ju1.2 lt 40) "/><b>一般水平</b>，仓储利用空间，仓储容积等是改进的具体方向。
+  <elseif condition="($ju1.2 elt 20) "/><b>差水平</b>，仓储利用空间，仓储容积等是改进的具体方向
+ </if>。<br/>
+ 
+  仓储环节单位电能消耗:   <b>S13= 100*<{$v3.1|substr=0,5}>+80*<{$v3.2|substr=0,5}>+60*<{$v3.3|substr=0,5}>+40*<{$v3.4|substr=0,5}>+20*<{$v3.5|substr=0,5}>= <{$ju1.3|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju1.3 gt 40) and  ($ju1.3 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju1.3 gt 60) and  ($ju1.3 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju1.3 gt 80) and  ($ju1.3 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju1.3 gt 20) and  ($ju1.3 lt 40) "/><b>一般水平</b>，仓储环节耗电量，计算期总作业量等是改进的具体方向。
+  <elseif condition="($ju1.3 elt 20) "/><b>差水平</b>，仓储环节耗电量，计算期总作业量等是改进的具体方向
+ </if>。<br/>
+ 
+ 
+ <br/>在卷烟绿色分拣下：<br/>
+   分拣环节卷烟破损率:   <b>S21= 100*<{$b1.1|substr=0,5}>+80*<{$b1.2|substr=0,5}>+60*<{$b1.3|substr=0,5}>+40*<{$b1.4|substr=0,5}>+20*<{$b1.5|substr=0,5}>= <{$ju2.1|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.1 gt 40) and  ($ju2.1 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.1 gt 60) and  ($ju2.1 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.1 gt 80) and  ($ju2.1 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.1 gt 20) and  ($ju2.1 lt 40) "/><b>一般水平</b>  ，计算期分拣破损量，计算期总作业量等是改进的具体方向。
+  <elseif condition="($ju2.1 elt 20) "/><b>差水平</b> ，计算期分拣破损量，计算期总作业量等是改进的具体方向
+ </if>。<br/>
+ 
+  分拣环节单位电能消耗   <b>S22= 100*<{$b2.1|substr=0,5}>+80*<{$b2.2|substr=0,5}>+60*<{$b2.3|substr=0,5}>+40*<{$b2.4|substr=0,5}>+20*<{$b2.5|substr=0,5}>= <{$ju2.2|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.2 gt 40) and  ($ju2.2 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.2 gt 60) and  ($ju2.2 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.2 gt 80) and  ($ju2.2 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.2 gt 20) and  ($ju2.2 lt 40) "/><b>一般水平</b>  ，分拣环节耗电量，计算期总作业量等是改进的具体方向。
+  <elseif condition="($ju2.2 elt 20) "/><b>差水平</b> ，分拣环节耗电量，计算期总作业量等是改进的具体方向
+ </if>。<br/>
+ 
+   分拣正确率   <b>S23= 100*<{$b3.1|substr=0,5}>+80*<{$b3.2|substr=0,5}>+60*<{$b3.3|substr=0,5}>+40*<{$b3.4|substr=0,5}>+20*<{$b3.5|substr=0,5}>= <{$ju2.3|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.3 gt 40) and  ($ju2.3 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.3 gt 60) and  ($ju2.3 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.3 gt 80) and  ($ju2.3 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.3 gt 20) and  ($ju2.3 lt 40) "/><b>一般水平</b>  <!-- ，计算期仓储破损量，计算期总作业量等是改进的具体方向。 -->
+  <elseif condition="($ju2.3 elt 20) "/><b>差水平</b> <!-- ，计算期仓储破损量，计算期总作业量等是改进的具体方向 -->
+ </if>。<br/>
+ 
+  平均作业效率   <b>S24= 100*<{$b4.1|substr=0,5}>+80*<{$b4.2|substr=0,5}>+60*<{$b4.3|substr=0,5}>+40*<{$b4.4|substr=0,5}>+20*<{$b4.5|substr=0,5}>= <{$ju2.4|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.4 gt 40) and  ($ju2.4 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.4 gt 60) and  ($ju2.4 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.4 gt 80) and  ($ju2.4 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.4 gt 20) and  ($ju2.4 lt 40) "/><b>一般水平</b>  ，分拣数量，分拣时间等是改进的具体方向。
+  <elseif condition="($ju2.4 elt 20) "/><b>差水平</b> ，分拣数量，分拣时间等是改进的具体方向
+ </if>。<br/>
+ 
+  人均分拣效率   <b>S25= 100*<{$b5.1|substr=0,5}>+80*<{$b5.2|substr=0,5}>+60*<{$b5.3|substr=0,5}>+40*<{$b5.4|substr=0,5}>+20*<{$b5.5|substr=0,5}>= <{$ju2.5|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.5 gt 40) and  ($ju2.5 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.5 gt 60) and  ($ju2.5 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.5 gt 80) and  ($ju2.5 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.5 gt 20) and  ($ju2.5 lt 40) "/><b>一般水平</b>  ，平均作业效率，人数等是改进的具体方向。
+  <elseif condition="($ju2.5 elt 20) "/><b>差水平</b> ，平均作业效率，人数等是改进的具体方向
+ </if>。<br/> 
+ 
+   分拣设备有效作业率   <b>S26= 100*<{$b6.1|substr=0,5}>+80*<{$b6.2|substr=0,5}>+60*<{$b6.3|substr=0,5}>+40*<{$b6.4|substr=0,5}>+20*<{$b6.5|substr=0,5}>= <{$ju2.6|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.6 gt 40) and  ($ju2.6 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.6 gt 60) and  ($ju2.6 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.6 gt 80) and  ($ju2.6 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.6 gt 20) and  ($ju2.6 lt 40) "/><b>一般水平</b>  ，平均作业效率，设备额定效率等是改进的具体方向。
+  <elseif condition="($ju2.6 elt 20) "/><b>差水平</b> ，平均作业效率，设备额定效率等是改进的具体方向
+ </if>。<br/> 
+ 
+  纸箱合格率   <b>S27= 100*<{$b7.1|substr=0,5}>+80*<{$b7.2|substr=0,5}>+60*<{$b7.3|substr=0,5}>+40*<{$b7.4|substr=0,5}>+20*<{$b7.5|substr=0,5}>= <{$ju2.7|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.7 gt 40) and  ($ju2.7 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.7 gt 60) and  ($ju2.7 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.7 gt 80) and  ($ju2.7 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.7 gt 20) and  ($ju2.7 lt 40) "/><b>一般水平</b>  ，当季纸箱合格数，当季实际回收纸箱数量等是改进的具体方向。
+  <elseif condition="($ju2.7 elt 20) "/><b>差水平</b> ，当季纸箱合格数，当季实际回收纸箱数量等是改进的具体方向
+ </if>。<br/> 
+ 
+ 分拣车间噪声水平  <b>S28= 100*<{$b8.1|substr=0,5}>+80*<{$b8.2|substr=0,5}>+60*<{$b8.3|substr=0,5}>+40*<{$b8.4|substr=0,5}>+20*<{$b8.5|substr=0,5}>= <{$ju2.8|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.8 gt 40) and  ($ju2.8 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.8 gt 60) and  ($ju2.8 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.8 gt 80) and  ($ju2.8 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.8 gt 20) and  ($ju2.8 lt 40) "/><b>一般水平</b>   分拣车间噪声是改进的具体方向。
+  <elseif condition="($ju2.8 elt 20) "/><b>差水平</b> ， 分拣车间噪声是改进的具体方向
+ </if>。<br/> 
+ 
+  PE膜回收率  <b>S29= 100*<{$b9.1|substr=0,5}>+80*<{$b9.2|substr=0,5}>+60*<{$b9.3|substr=0,5}>+40*<{$b9.4|substr=0,5}>+20*<{$b9.5|substr=0,5}>= <{$ju2.9|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.9 gt 40) and  ($ju2.9 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.9 gt 60) and  ($ju2.9 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.9 gt 80) and  ($ju2.9 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.9 gt 20) and  ($ju2.9 lt 40) "/><b>一般水平</b>  ，PE膜回收量，PE膜使用量等是改进的具体方向。
+  <elseif condition="($ju2.9 elt 20) "/><b>差水平</b> ，PE膜回收量，PE膜使用量等是改进的具体方向
+ </if>。<br/> 
+ 
+   纸箱回收率  <b>S290= 100*<{$b10.1|substr=0,5}>+80*<{$b10.2|substr=0,5}>+60*<{$b10.3|substr=0,5}>+40*<{$b10.4|substr=0,5}>+20*<{$b10.5|substr=0,5}>= <{$ju2.10|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju2.10 gt 40) and  ($ju2.10 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju2.10 gt 60) and  ($ju2.10 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju2.10 gt 80) and  ($ju2.10 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju2.10 gt 20) and  ($ju2.10 lt 40) "/><b>一般水平</b>  ，纸箱实际回收量，纸箱计划调拨量等是改进的具体方向。
+  <elseif condition="($ju2.10 elt 20) "/><b>差水平</b> ，纸箱实际回收量，纸箱计划调拨量等是改进的具体方向
+ </if>。<br/> 
+ 
+ 
+ 
+ <br/>在卷烟绿色配送运输下：<br/>
+   单箱油耗量:   <b>S31= 100*<{$m1.1|substr=0,5}>+80*<{$m1.2|substr=0,5}>+60*<{$m1.3|substr=0,5}>+40*<{$m1.4|substr=0,5}>+20*<{$m1.5|substr=0,5}>= <{$ju3.1|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju3.1 gt 40) and  ($ju3.1 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju3.1 gt 60) and  ($ju3.1 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju3.1 gt 80) and  ($ju3.1 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju3.1 gt 20) and  ($ju3.1 lt 40) "/><b>一般水平</b>  ，计算期油耗，计算期总作业量等是改进的具体方向。
+  <elseif condition="($ju3.1 elt 20) "/><b>差水平</b> 计算期油耗，计算期总作业量等是改进的具体方向
+ </if>。<br/>
+ 
+    配送环节卷烟破损量:   <b>S32= 100*<{$m2.1|substr=0,5}>+80*<{$m2.2|substr=0,5}>+60*<{$m2.3|substr=0,5}>+40*<{$m2.4|substr=0,5}>+20*<{$m2.5|substr=0,5}>= <{$ju3.2|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju3.2 gt 40) and  ($ju3.2 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju3.2 gt 60) and  ($ju3.2 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju3.2 gt 80) and  ($ju3.2 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju3.2 gt 20) and  ($ju3.2 lt 40) "/><b>一般水平</b>  ，计算期送货破损量，计算期总作业量等是改进的具体方向。
+  <elseif condition="($ju3.2 elt 20) "/><b>差水平</b> ，计算期送货破损量，计算期总作业量等是改进的具体方向
+ </if>。<br/>
+ 
+   送货准确率:   <b>S33= 100*<{$m3.1|substr=0,5}>+80*<{$m3.2|substr=0,5}>+60*<{$m3.3|substr=0,5}>+40*<{$m3.4|substr=0,5}>+20*<{$m3.5|substr=0,5}>= <{$ju3.3|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju3.3 gt 40) and  ($ju3.3 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju3.3 gt 60) and  ($ju3.3 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju3.3 gt 80) and  ($ju3.3 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju3.3 gt 20) and  ($ju3.3 lt 40) "/><b>一般水平</b>  ，计算期送货准确量，计算期总作业量等是改进的具体方向。
+  <elseif condition="($ju3.3 elt 20) "/><b>差水平</b> ，计算期送货准确量，计算期总作业量等是改进的具体方向
+ </if>。<br/>
+ 
+ 
+  车辆装载率:   <b>S34= 100*<{$m4.1|substr=0,5}>+80*<{$m4.2|substr=0,5}>+60*<{$m4.3|substr=0,5}>+40*<{$m4.4|substr=0,5}>+20*<{$m4.5|substr=0,5}>= <{$ju3.4|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju3.4 gt 40) and  ($ju3.4 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju3.4 gt 60) and  ($ju3.4 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju3.4 gt 80) and  ($ju3.4 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju3.4 gt 20) and  ($ju3.4 lt 40) "/><b>一般水平</b>  ，运输卷烟总体积，车辆容积等是改进的具体方向。
+  <elseif condition="($ju3.4 elt 20) "/><b>差水平</b>，运输卷烟总体积，车辆容积量等是改进的具体方向
+ </if>。<br/>
+ 
+   配送车辆GPS使用率:   <b>S35= 100*<{$m5.1|substr=0,5}>+80*<{$m5.2|substr=0,5}>+60*<{$m5.3|substr=0,5}>+40*<{$m5.4|substr=0,5}>+20*<{$m5.5|substr=0,5}>= <{$ju3.5|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju3.5 gt 40) and  ($ju3.5 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju3.5 gt 60) and  ($ju3.5 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju3.5 gt 80) and  ($ju3.5 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju3.5 gt 20) and  ($ju3.5 lt 40) "/><b>一般水平</b> <!--  ，计算期仓储破损量，计算期总作业量等是改进的具体方向。 -->
+  <elseif condition="($ju3.5 elt 20) "/><b>差水平</b><!--  ，计算期仓储破损量，计算期总作业量等是改进的具体方向 -->
+ </if>。<br/>
+ 
+    运输车辆百公里油耗:   <b>S36= 100*<{$m6.1|substr=0,5}>+80*<{$m6.2|substr=0,5}>+60*<{$m6.3|substr=0,5}>+40*<{$m6.4|substr=0,5}>+20*<{$m6.5|substr=0,5}>= <{$ju3.6|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju3.6 gt 40) and  ($ju3.6 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju3.6 gt 60) and  ($ju3.6 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju3.6 gt 80) and  ($ju3.6 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju3.6 gt 20) and  ($ju3.6 lt 40) "/><b>一般水平</b>  ，计算期油耗，计算期总作业量等是改进的具体方向。
+  <elseif condition="($ju3.6 elt 20) "/><b>差水平</b> ，计算期油耗，计算期总作业量等是改进的具体方向
+ </if>。<br/>
+ 
+ 
+ 
+ 
+ <br/>在综合指标下：<br/>
+   环境管理体系认证情况:   <b>S41= 100*<{$n1.1|substr=0,5}>+80*<{$n1.2|substr=0,5}>+60*<{$n1.3|substr=0,5}>+40*<{$n1.4|substr=0,5}>+20*<{$n1.5|substr=0,5}>= <{$ju4.1|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju4.1 gt 40) and  ($ju4.1 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju4.1 gt 60) and  ($ju4.1 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju4.1 gt 80) and  ($ju4.1 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju4.1 gt 20) and  ($ju4.1 lt 40) "/><b>一般水平</b>  ，计算期仓储破损量，计算期总作业量等是改进的具体方向。
+  <elseif condition="($ju4.1 elt 20) "/><b>差水平</b> ，计算期仓储破损量，计算期总作业量等是改进的具体方向
+ </if>。<br/>
+ 
+   物流费用率:   <b>S42= 100*<{$n2.1|substr=0,5}>+80*<{$n2.2|substr=0,5}>+60*<{$n2.3|substr=0,5}>+40*<{$n2.4|substr=0,5}>+20*<{$n2.5|substr=0,5}>= <{$ju4.2|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju4.2 gt 40) and  ($ju4.2 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju4.2 gt 60) and  ($ju4.2 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju4.2 gt 80) and  ($ju4.2 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju4.2 gt 20) and  ($ju4.2 lt 40) "/><b>一般水平</b>  ，计算期物流成本总额，计算期销售收入等是改进的具体方向。
+  <elseif condition="($ju4.2 elt 20) "/><b>差水平</b> ，计算期物流成本总额，计算期销售收入等是改进的具体方向
+ </if>。<br/>
+ 
+    人才保障:   <b>S43= 100*<{$n3.1|substr=0,5}>+80*<{$n3.2|substr=0,5}>+60*<{$n3.3|substr=0,5}>+40*<{$n3.4|substr=0,5}>+20*<{$n3.5|substr=0,5}>= <{$ju4.3|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju4.3 gt 40) and  ($ju4.3 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju4.3 gt 60) and  ($ju4.3 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju4.3 gt 80) and  ($ju4.3 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju4.3 gt 20) and  ($ju4.3 lt 40) "/><b>一般水平</b> <!--  ，计算期仓储破损量，计算期总作业量等是改进的具体方向。 -->
+  <elseif condition="($ju4.3 elt 20) "/><b>差水平</b> <!-- ，计算期仓储破损量，计算期总作业量等是改进的具体方向
+ </if>。<br/> -->
+ 
+    客户绿色物流认同率：   <b>S44= 100*<{$n4.1|substr=0,5}>+80*<{$n4.2|substr=0,5}>+60*<{$n4.3|substr=0,5}>+40*<{$n4.4|substr=0,5}>+20*<{$n4.5|substr=0,5}>= <{$ju4.4|substr=0,5}></b> ,
+ 处于
+  <if condition="($ju4.4 gt 40) and  ($ju4.4 lt 60) "> <b>中等水平</b>
+	<elseif condition="($ju4.4 gt 60) and  ($ju4.4 lt 80) "/><b>良好水平</b>
+  <elseif condition="($ju4.4 gt 80) and  ($ju4.4 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($ju4.4 gt 20) and  ($ju4.4 lt 40) "/><b>一般水平</b>  ，支持公司绿色物流的零售商数目，公司零售商数等是改进的具体方向。
+  <elseif condition="($ju4.4 elt 20) "/><b>差水平</b> ，支持公司绿色物流的零售商数目，公司零售商数等是改进的具体方向
+ </if>。<br/><br/>
+ 
+ 
+ (其中，v1，v2，v3，v4，v5在各个分析角度的取值，
+ 它们是通过基于标杆管理思想的三角模糊数层次分析法模型计算出来的，代表各分析角度在v1，v2，v3，v4，v5上的隶属度)。</font>
+ </div>

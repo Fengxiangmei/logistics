@@ -1,0 +1,121 @@
+<layout name="pub_comment2" /> 
+
+<div class="content">
+   <div class="header">
+            <div class="stats">
+  <!--   <p class="stat"><span class="label label-info">5</span> Tickets</p>
+    <p class="stat"><span class="label label-success">27</span> Tasks</p>
+    <p class="stat"><span class="label label-danger">15</span> Overdue</p> -->
+</div>
+
+            <h1 class="page-title">角度分析</h1>
+     <!--    <ul class="breadcrumb">
+            <li><a href="index.html">卷烟绿色物流评价</a> </li>
+            <li class="active"><a href="index.html">卷烟绿色仓储</a></li>
+			<li class="active">仓储利用率</li>
+        </ul> -->
+
+        </div>
+  <div class="main-content">
+<center>  
+ <table border="1" width="800px" height="250px">
+ <caption><b><h2>分析角度在各评语下的隶属度</h2></b></caption>
+         <tr width="40px">
+            <th>分析角度</th>
+            <th>v1</th>
+            <th>v2</th>
+			<th>v3</th>
+            <th>v4</th>
+			<th>v5</th>
+			<th>总分</th>
+         </tr>
+		 <tr width="40px">
+            <th>分值</th>
+            <td align="center">100</td>
+            <td align="center">80</td>
+			<td align="center">60</td>
+            <td align="center">40</td>
+			<td align="center">20</td>
+			<td  align="center"></td>
+         </tr>
+		<tr width="40px">
+            <th>卷烟绿色仓储</th>
+			<td  align="center"><{$a1.1|substr=0,5}></td>
+			<td  align="center"><{$a1.2|substr=0,5}></td>
+            <td  align="center"><{$a1.3|substr=0,5}></td>
+			<td  align="center"><{$a1.4|substr=0,5}></td>
+            <td  align="center"><{$a1.5|substr=0,5}></td>
+		    <td  align="center"><{$S1|substr=0,5}></td>      
+         </tr>
+		 	<tr width="40px">
+            <th>卷烟绿色分拣</th>
+           <td  align="center"><{$a2.1|substr=0,5}></td>
+			<td  align="center"><{$a2.2|substr=0,5}></td>
+            <td  align="center"><{$a2.3|substr=0,5}></td>
+			<td  align="center"><{$a2.4|substr=0,5}></td>
+            <td  align="center"><{$a2.5|substr=0,5}></td>
+            <td  align="center"><{$S2|substr=0,5}></td>   
+         </tr>
+		 	<tr width="40px">
+            <th>卷烟绿色配送运输</th>
+          <td  align="center"><{$a3.1|substr=0,5}></td>
+			<td  align="center"><{$a3.2|substr=0,5}></td>
+            <td  align="center"><{$a3.3|substr=0,5}></td>
+			<td  align="center"><{$a3.4|substr=0,5}></td>
+            <td  align="center"><{$a3.5|substr=0,5}></td>
+            <td  align="center"><{$S3|substr=0,5}></td>   
+         </tr>
+		 	<tr width="40px">
+            <th>综合指标</th>
+			<td  align="center"><{$a4.1|substr=0,5}></td>
+			<td  align="center"><{$a4.2|substr=0,5}></td>
+            <td  align="center"><{$a4.3|substr=0,5}></td>
+			<td  align="center"><{$a4.4|substr=0,5}></td>
+            <td  align="center"><{$a4.5|substr=0,5}></td>
+            <td  align="center"><{$S4|substr=0,5}></td>   
+         </tr>
+     
+   </table>
+<br/>
+</center>
+<br/>
+  <font size ="5">本系统将v1，v2，v3，v4，v5 分别表示“优秀”，“良好”，“中等”，“一般”，“差”五个等级，它们的分值分别为100，80，60，40，20。<br/>
+ 根据上表可以得出:<br/>卷烟绿色仓储的最终得分:   <b>S1= 100*<{$a1.1|substr=0,5}>+80*<{$a1.2|substr=0,5}>+60*<{$a1.3|substr=0,5}>+40*<{$a1.4|substr=0,5}>+20*<{$a1.5|substr=0,5}>= <{$S1|substr=0,5}></b> ,
+ 处于
+  <if condition="($S1 gt 40) and  ($S1 lt 60) "> <b>中等水平</b>
+	<elseif condition="($S1 gt 60) and  ($S1 lt 80) "/><b>良好水平</b>
+  <elseif condition="($S1 gt 80) and  ($S1 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($S1 gt 20) and  ($S1 lt 40) "/><b>一般水平</b> ，仓储环节卷烟破损率，仓库利用率，仓储环节单位电能消耗等方向是改进的具体方向。
+  <elseif condition="($S1 elt 20) "/><b>差水平</b>，仓储环节卷烟破损率，仓库利用率，仓储环节单位电能消耗等方向是改进的具体方向
+ </if>。<br/>
+ 
+ 卷烟绿色分拣的最终得分:   <b>S2= 100*<{$a2.1|substr=0,5}>+80*<{$a2.2|substr=0,5}>+60*<{$a2.3|substr=0,5}>+40*<{$a2.4|substr=0,5}>+20*<{$a2.5|substr=0,5}>= <{$S2|substr=0,5}></b> ,
+ 处于
+  <if condition="($S2 gt 40) and  ($S2 lt 60) "> <b>中等水平</b>
+	<elseif condition="($S2 gt 60) and  ($S2 lt 80) "/><b>良好水平</b>
+  <elseif condition="($S2 gt 80) and  ($S2 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($S2 gt 20) and  ($S2 lt 40) "/><b>一般水平</b>，分拣环节卷烟破损率，分拣环节单位电能消耗，分拣差错率，平均作业效率，人均分拣效率，分拣设备有效作业率，纸箱合格率，分拣车间噪声水平，PE膜回收率，纸箱回收率等是改进的具体方向。
+  <elseif condition="($S2 elt 20) "/><b>差水平</b>，分拣环节卷烟破损率，分拣环节单位电能消耗，分拣差错率，平均作业效率，人均分拣效率，分拣设备有效作业率，纸箱合格率，分拣车间噪声水平，PE膜回收率，纸箱回收率等是改进的具体方向
+ </if>。<br/>
+ 
+  卷烟绿色配送运输的最终得分:   <b>S3= 100*<{$a3.1|substr=0,5}>+80*<{$a3.2|substr=0,5}>+60*<{$a3.3|substr=0,5}>+40*<{$a3.4|substr=0,5}>+20*<{$a3.5|substr=0,5}>= <{$S3|substr=0,5}></b> ,
+ 处于
+  <if condition="($S3 gt 40) and  ($S3 lt 60) "> <b>中等水平</b>
+	<elseif condition="($S3 gt 60) and  ($S3 lt 80) "/><b>良好水平</b>
+  <elseif condition="($S3 gt 80) and  ($S3 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($S3 gt 20) and  ($S3 lt 40) "/><b>一般水平</b>，单箱油耗量，配送环节卷烟破损率，送货准确率，车辆装载率，配送车辆GPS使用率，运输车辆百公里油耗等是改进的具体方向。
+  <elseif condition="($S3 elt 20) "/><b>差水平</b>，单箱油耗量，配送环节卷烟破损率，送货准确率，车辆装载率，配送车辆GPS使用率，运输车辆百公里油耗等是改进的具体方向
+ </if>。<br/>
+ 
+   综合指标的最终得分:   <b>S4= 100*<{$a4.1|substr=0,5}>+80*<{$a4.2|substr=0,5}>+60*<{$a4.3|substr=0,5}>+40*<{$a4.4|substr=0,5}>+20*<{$a4.5|substr=0,5}>= <{$S4|substr=0,5}></b> ,
+ 处于
+  <if condition="($S4 gt 40) and  ($S4 lt 60) "> <b>中等水平</b>
+	<elseif condition="($S4 gt 60) and  ($S4 lt 80) "/><b>良好水平</b>
+  <elseif condition="($S4 gt 80) and  ($S4 elt 100) "/><b>优秀水平</b>
+  <elseif condition="($S4 gt 20) and  ($S4 lt 40) "/><b>一般水平</b>，环境管理体系认证情况，物流费用率，人才保障，客户绿色物流认同率是改进的具体方向。
+  <elseif condition="($S4 elt 20) "/><b>差水平</b>，环境管理体系认证情况，物流费用率，人才保障，客户绿色物流认同率是改进的具体方向
+ </if>。<br/>
+ 
+ (其中，v1，v2，v3，v4，v5在各个分析角度的取值，
+ 它们是通过基于标杆管理思想的三角模糊数层次分析法模型计算出来的，代表各分析角度在v1，v2，v3，v4，v5上的隶属度)。</font>
+ </div>

@@ -1,0 +1,68 @@
+<layout name="pub_comment2" /> 
+
+<div class="content">
+   <div class="header">
+            <div class="stats">
+  <!--   <p class="stat"><span class="label label-info">5</span> Tickets</p>
+    <p class="stat"><span class="label label-success">27</span> Tasks</p>
+    <p class="stat"><span class="label label-danger">15</span> Overdue</p> -->
+</div>
+
+            <h1 class="page-title">总体分析</h1>
+     <!--    <ul class="breadcrumb">
+            <li><a href="index.html">卷烟绿色物流评价</a> </li>
+            <li class="active"><a href="index.html">卷烟绿色仓储</a></li>
+			<li class="active">仓储利用率</li>
+        </ul> -->
+
+        </div>
+  <div class="main-content">
+<center>  
+ <table border="1" width="800px" height="100px">
+ <caption><b><h3>卷烟绿色物流绩效总体分析</h3></b></caption>
+         <tr width="40px">
+            <th></th>
+            <th>v1</th>
+            <th>v2</th>
+			<th>v3</th>
+            <th>v4</th>
+			<th>v5</th>
+			<th>总分</th>
+         </tr>
+		<tr width="40px">
+            <th>卷烟绿色物流</th>
+            <td  align="center"><{$sum1|substr=0,5}></td>
+            <td  align="center"><{$sum2|substr=0,5}></td>
+			<td  align="center"><{$sum3|substr=0,5}></td>
+            <td  align="center"><{$sum4|substr=0,5}></td>
+			<td  align="center"><{$sum5|substr=0,5}></td>
+			<td  align="center"></td>
+           
+         </tr>
+         <tr width="40px">
+            <th>分值</th>
+            <td align="center">100</td>
+            <td align="center">80</td>
+			<td align="center">60</td>
+            <td align="center">40</td>
+			<td align="center">20</td>
+			<td  align="center"><{$S|substr=0,5}></td>
+         </tr>
+   </table>
+<br/>
+</center>
+<br/>
+ <font size ="5">本系统将v1，v2，v3，v4，v5 分别表示“优秀”，“良好”，“中等”，“一般”，“差”五个等级，它们的分值分别为100，80，60，40，20。<br/>
+ 根据上表可以得出卷烟绿色物流的最终得分:   <b>S= 100*<{$sum1|substr=0,5}>+80*<{$sum2|substr=0,5}>+60*<{$sum3|substr=0,5}>+40*<{$sum4|substr=0,5}>+20*<{$sum5|substr=0,5}>= <{$S|substr=0,5}></b> ,
+ 可见公司的卷烟绿色物流绩效基本处于
+ 
+ <if condition="($S gt 40) and  ($S lt 60) "> <b>中等水平</b>
+ <elseif condition="($S gt 60) and  ($S lt 80) "/><b>良好水平</b>
+  <elseif condition="($S gt 80) and  ($S lt 100) "/><b>优秀水平</b>
+   <elseif condition="($S gt 20) and  ($S lt 40) "/><b>一般水平</b>
+    <elseif condition="($S lt 20) "/><b>差水平</b>
+<!--  <else />  -->
+ </if><!-- 中等水平。 -->。<br/>
+ (其中，<{$sum1|substr=0,5}>，<{$sum2|substr=0,5}>，<{$sum3|substr=0,5}>，<{$sum4|substr=0,5}>，<{$sum5|substr=0,5}>
+ 它们是通过基于标杆管理思想的三角模糊数层次分析法模型计算出来的，分别表示卷烟绿色物流在v1，v2，v3，v4，v5上的隶属度)。</font>
+ </div>

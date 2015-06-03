@@ -1,0 +1,32 @@
+ <layout name="pub_index" /> 
+ <script language ="javascript" >
+var curIndex=0;
+//时间间隔(单位毫秒)，每秒钟显示一张，数组共有5张图片放在image文件夹下。图片路径可以是绝对路径或者相对路径
+var timeInterval=3000; //时间3秒
+var arr=new Array();
+arr[0]="__PUBLIC__/images/main1.jpg";
+arr[1]="__PUBLIC__/images/main2.jpg";
+arr[2]="__PUBLIC__/images/main4.jpg";
+arr[3]="__PUBLIC__/images/main5.jpg";
+arr[4]="__PUBLIC__/images/main6.jpg";
+setInterval(changeImg,timeInterval);
+function changeImg()
+{
+    var obj=document.getElementById("obj");
+    if (curIndex==arr.length-1) 
+    {
+        curIndex=0;
+    }
+    else
+    {
+        curIndex+=1;
+    }
+    obj.src=arr[curIndex];
+}
+</script>
+<center>
+<image  id=obj src="__PUBLIC__/images/main6.jpg" height="700px" width="1000px" border="0px"/>
+</center>
+    
+  
+

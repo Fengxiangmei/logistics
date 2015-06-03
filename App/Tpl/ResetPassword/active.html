@@ -1,0 +1,65 @@
+<layout name="pub_header" />
+
+        <div class="dialog">
+    <div class="panel panel-default">
+        <p class="panel-heading no-collapse">重置密码</p>
+        <div class="panel-body">
+            <form name="RegForm" method="post" action="active" onSubmit="return InputCheck(this)">
+                <div class="form-group">
+                <label>&nbsp;密码(不少于6位)</label>
+                    <input type="password" class="form-control span12 form-control" id="password" name="password">
+                </div>
+                <div class="form-group">
+                <label>&nbsp;确认密码</label>
+                    <input type="password" class="form-control span12 form-control" id="repass" name="repass">
+                </div>
+               
+               <input type="submit" name="submit" value="确 定" class="btn btn-primary pull-right" />
+                <div class="clearfix"> </div>
+            </form>
+
+        </div>
+        <p></p>
+    </div>
+   
+   
+</div>
+
+
+
+    <script src="__PUBLIC__/lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $("[rel=tooltip]").tooltip();
+        $(function() {
+            $('.demo-cancel-click').click(function(){return false;});
+        });
+    </script>
+    
+  <script language=JavaScript>
+
+
+function InputCheck(RegForm)
+{
+   
+  if (RegForm.password.value == "")
+  {
+    alert("请输入密码!");
+    RegForm.password.focus();
+    return (false);
+  }
+  if (RegForm.repass.value != RegForm.password.value)
+  {
+    alert("两次密码不一致!");
+    RegForm.repass.value="";
+    RegForm.repass.focus();
+    return (false);
+  }
+password = RegForm.password.value;
+if(password.length<6){
+         alert("密码长度必须大于六位！");
+         return(false);
+    }
+}
+
+</script>
+</body></html>

@@ -1,0 +1,227 @@
+<!-- <layout name="pub_input" /> -->
+<script type="text/javascript">
+
+//x限制只能输入数字
+ function clearNoNum(obj)
+    {
+        //先把非数字的都替换掉，除了数字和.
+        obj.value = obj.value.replace(/[^\d.]/g,"");
+        //必须保证第一个为数字而不是.
+        obj.value = obj.value.replace(/^\./g,"");
+        //保证只有出现一个.而没有多个.
+        obj.value = obj.value.replace(/\.{2,}/g,".");
+        //保证.只出现一次，而不能出现两次以上
+        obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
+    }
+
+function InputCheck(InputForm)
+{
+//检查下拉框是否选择
+/*if(document.getElementById("parameter").value == "null"){
+  alert("请选择评价参数！");
+  return false;
+}*/
+//检查输入框是否全部输入
+  if (InputForm.damage_s.value == "")
+  {
+    alert("请输入计算期分拣破损量!");
+    InputForm.damage_s.focus();
+    return (false);
+  }
+  if (InputForm.total_s.value == "")
+  {
+    alert("请输入计算期总作业量!");
+    InputForm.total_s.focus();
+    return (false);
+  }
+    if (InputForm.mistake_s.value == "")
+  {
+    alert("请输入计算期分拣差错量!");
+    InputForm.mistake_s.focus();
+    return (false);
+  }
+   if (InputForm.hours.value == "")
+  {
+    alert("请输入分拣时间!");
+    InputForm.hours.focus();
+    return (false);
+  }
+   if (InputForm.people.value == "")
+  {
+    alert("请输入人数!");
+    InputForm.people.focus();
+    return (false);
+  }
+  
+  if (InputForm.efficiency.value == "")
+  {
+    alert("请输入设备额定效率!");
+    InputForm.efficiency.focus();
+    return (false);
+  }
+    if (InputForm.pass.value == "")
+  {
+    alert("请输入纸箱当季合格数!");
+    InputForm.pass.focus();
+    return (false);
+  }
+  
+
+      if (InputForm.PE_re.value == "")
+  {
+    alert("请输入PE膜回收量!");
+    InputForm.PE_re.focus();
+    return (false);
+  }
+  
+   if (InputForm.PE_use.value == "")
+  {
+    alert("请输入PE膜使用量!");
+    InputForm.PE_use.focus();
+    return (false);
+  }
+   if (InputForm.box_re.value == "")
+  {
+    alert("请输入纸箱实际回收量!");
+    InputForm.box_re.focus();
+    return (false);
+  }
+  
+   if (InputForm.plan.value == "")
+  {
+    alert("请输入纸箱计划调拨量!");
+    InputForm.plan.focus();
+    return (false);
+  }
+   if (InputForm.power_s.value == "")
+  {
+    alert("请输入分拣环节耗电量!");
+    InputForm.power_s.focus();
+    return (false);
+  }
+  
+   
+}
+
+</script>
+
+
+
+<style type="text/css">
+td {padding-top: 0.3cm;padding-bottom:0.3cm;}
+th {padding-top: 0.3cm;padding-bottom:0.3cm;}
+</style>
+<div class="content">
+        <div class="header">
+            <div class="stats">
+  <!--   <p class="stat"><span class="label label-info">5</span> Tickets</p>
+    <p class="stat"><span class="label label-success">27</span> Tasks</p>
+    <p class="stat"><span class="label label-danger">15</span> Overdue</p> -->
+</div>
+
+            <h1 class="page-title">卷烟绿色分拣</h1>
+        <ul class="breadcrumb">
+            <li><a href="__URL__/">数据录入与管理</a> </li>
+            <li class="active"><a href="#">卷烟绿色分拣</a></li>
+		<!-- 	<li class="active">仓储利用率</li> -->
+        </ul>
+
+        </div>
+        <div class="main-content">
+		<form id="InputForm"  onSubmit="return InputCheck(this)" name="InputForm" action="sorting_add" method="post" class= "shadow">  
+<font size="1" color="red">&nbsp;&nbsp;（以下各项只能填数字）</font>
+<fieldset><center>	
+<table border="0"  >
+  <tr>
+	   <th align="left">时间:</th>
+	   <th>
+		<select name="time" id="time"  class="choice" >
+		<option value="2010">2010</option>
+		<option value="2011">2011</option>
+		<option value="2012">2012</option>
+		<option value="2013">2013</option>
+		<option value="2014">2014</option>
+		<option value="2015">2015</option>
+		</select>
+		</th>
+	 <th align="">季度:</th>
+	   <th>
+		<select name="quarter" id="quarter"  class="choice" >
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		</select>
+		</th>
+		<!-- -->
+		
+  </tr>
+ <tr><th align="left">地点:</th>
+		<th>
+		<select name="place" id ="place"  class="choice" >
+		
+		<option value="长沙市">长沙市</option>
+		<option value="株洲市">株洲市</option>
+		<option value="湘潭市">湘潭市</option>
+		<option value="衡阳市">衡阳市</option>
+		<option value="邵阳市">邵阳市</option>
+		<option value="岳阳市">岳阳市</option>
+		<option value="常德市">常德市</option>
+		<option value="张家界市">张家界市</option>
+		<option value="益阳市">益阳市</option>
+		<option value="郴州市">郴州市</option>
+		<option value="永州市">永州市</option>
+		<option value="怀化市">怀化市</option>
+		<option value="娄底市">娄底市</option>
+		</select>
+		</th> </tr>
+		
+  
+  <tr>
+    <td align="left">计算期分拣破损量（箱）:</td><td><input id="damage_s" name="damage_s" type="text"  onkeyup="clearNoNum(this)"/></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算期总作业量（箱）:</td><td align="right"><input type="text" name="total_s" id ="total_s" onkeyup="clearNoNum(this)"/></td>
+  </tr>  <tr>&nbsp;&nbsp;&nbsp;&nbsp; </tr> 
+  
+   <tr>
+    <td align="left">计算期分拣差错量（箱）: </td><td><input type="text" name="mistake_s"  id ="mistake_s" onkeyup="clearNoNum(this)"/></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分拣时间（小时）:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td><td align="right"><input type="text" name="hours" id="hours" onkeyup="clearNoNum(this)"/></td>
+  </tr>
+  
+ <tr>
+    <td align="left">人数（个）:</td><td><input id="people" name="people" type="text"  onkeyup="clearNoNum(this)"/></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设备额定效率（箱/小时）:</td><td align="right"><input type="text" name="efficiency" id ="efficiency" onkeyup="clearNoNum(this)"/></td>
+  </tr>  <tr>&nbsp;&nbsp;&nbsp;&nbsp; </tr> 
+  
+   <tr>
+    <td align="left">纸箱当季合格数（个）: </td><td><input type="text" name="pass"  id ="pass" onkeyup="clearNoNum(this)"/></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PE膜回收量（吨）:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td><td align="right"><input type="text" name="PE_re" id="PE_re" onkeyup="clearNoNum(this)"/></td>
+  </tr>
+  
+   <tr>
+    <td align="left">PE膜使用量（吨）: </td><td><input type="text" name="PE_use" id = "PE_use" onkeyup="clearNoNum(this)"/></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;纸箱实际回收量（个）: </td><td align="right"><input type="text" name="box_re" id ="box_re" onkeyup="clearNoNum(this)"/></td>
+  </tr>
+  
+   <tr>
+    <td align="left">纸箱计划调拨量(个):</td><td><input type="text" name="plan" id="plan" onkeyup="clearNoNum(this)"/></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分拣环节耗电量（kw.h） </td><td align="right"><input type="text" name="power_s" id ="power_s" onkeyup="clearNoNum(this)"/></td>
+  </tr>
+    
+</table> </center>
+</fieldset> <br/>
+<input type="reset" value="重   置"  class="btn btn-primary btn-me-reset"/>
+ <input type="submit" value="确   定" class="btn btn-primary btn-me-ok "/>
+
+
+<br/><br/>
+ </form>
+
+<div id="output"></div> 
+		
+		
+		</div>
+		
+		
+		</div>
+
+            
